@@ -64,11 +64,19 @@
 				<version>3.0.0-M4</version>
 				<goals><goal>test</goal></goals>
 				<configuration>
+					
+                        <properties>
+                            <configurationParameters>
+                               junit.jupiter.execution.parallel.enabled = true
+                               junit.jupiter.execution.parallel.mode.default = concurrent
+                               junit.jupiter.execution.parallel.mode.classes.default = concurrent
+                            </configurationParameters>
+                        </properties>
 				<!--  <parallel>all</parallel>
-                <threadCount>7</threadCount>
-                <redirectTestOutputToFile>false</redirectTestOutputToFile>
+                                <threadCount>7</threadCount>
+                                <redirectTestOutputToFile>false</redirectTestOutputToFile>
 				<testFailureIgnore>true</testFailureIgnore>-->
-					<testFailureIgnore>true</testFailureIgnore>
+					
 				</configuration>
 			</plugin>
 
